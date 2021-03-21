@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Posts(models.Model):
-	userId = models.ForeignKey('Users', on_delete=models.CASCADE, null=True)
+	userId = models.ForeignKey('Users', on_delete=models.DO_NOTHING, null=True)
 	title = models.CharField(max_length=100)
 	body = models.CharField(max_length=200)
 
